@@ -4,7 +4,8 @@ import 'express-async-errors';
 
 import AppError from './errors/AppError';
 
-import createConnection from "./database";
+import createConnection from './database';
+import routes from "./routes";
 
 createConnection();
 
@@ -12,6 +13,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(routes);
 
 app.get('/', (req, res) => {
   res.status(200).send();
@@ -33,4 +35,4 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   });
 });
 
-export default app;
+app.listen(3000, () => console.log('Server is running!'));
