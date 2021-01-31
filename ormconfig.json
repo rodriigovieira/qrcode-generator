@@ -5,6 +5,7 @@
   "username": "root",
   "password": "",
   "database": "qrcode",
+  "synchronize": true,
   "entities": [
     "./src/models/*.ts"
   ]
