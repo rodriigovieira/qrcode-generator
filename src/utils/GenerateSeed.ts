@@ -9,7 +9,7 @@ export const generateSeed = (): string => {
   const characters: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   const seedLength: number = 200;
 
-  for (var i = 0; i < seedLength; i++) {
+  for (let i = 0; i < seedLength; i++) {
     result += characters.charAt(Math.floor(Math.random() * characters.length));
   }
 

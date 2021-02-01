@@ -19,8 +19,11 @@
     "node": ">= 10",
     "npm": ">= 6.4"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "typescript",
+    "qr-code"
+  ],
+  "author": "Rodrigo Vieira",
   "license": "MIT",
   "devDependencies": {
     "@types/cors": "^2.8.9",
