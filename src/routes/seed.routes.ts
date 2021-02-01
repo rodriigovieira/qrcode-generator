@@ -19,7 +19,13 @@ seedRoutes.get('/:seed', async (request, response) => {
 
     const isStillValid = nowTimestamp < seedTimestamp;
 
-    response.send(isStillValid);
+    const infoToReturn = {
+      isValid: isStillValid,
+      expires_at: foundSeed.expires_at,
+      seed: foundSeed.seed,
+    }
+
+    response.json(infoToReturn);
   } else {
     throw new AppError('Seed not found', 400);
   }
@@ -37,7 +43,7 @@ seedRoutes.get('/', async (request, response) => {
 
   await seedsRepository.save(seed);
 
-  response.send(seed);
+  response.json(seed);
 });
 
 export default seedRoutes;
