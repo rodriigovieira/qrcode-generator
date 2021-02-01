@@ -5,7 +5,9 @@ import 'express-async-errors';
 import AppError from './errors/AppError';
 
 import createConnection from './database';
-import routes from "./routes";
+import routes from './routes';
+
+const port = process.env.PORT || 3000;
 
 createConnection();
 
@@ -35,4 +37,4 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
   });
 });
 
-app.listen(3000, () => console.log('Server is running!'));
+app.listen(port, () => console.log(`Server is running at port ${port}!`));
