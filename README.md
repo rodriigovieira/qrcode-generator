@@ -6,6 +6,8 @@ The project features a seed generation system, providing the client with a uniqu
 
 By default, they have a duration of 1 minute.
 
+This project is available at https://qrcode-generator-backend-app.herokuapp.com. You can also install it locally if you prefer.
+
 ### Setting up the project
 
 First, clone the project:
